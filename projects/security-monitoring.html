@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Monitoring and Triage | Dimple Dogra</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        header {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 8%;
+        }
+
+        nav a {
+            color: #263238;
+            text-decoration: none;
+            margin-right: 24px;
+            font-size: 14px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 24px;
+        }
+
+        .eyebrow {
+            color: #087e8b;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin: 12px 0 20px;
+        }
+
+        h2 {
+            font-size: 23px;
+            margin: 38px 0 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #52616b;
+        }
+
+        ul {
+            padding-left: 22px;
+            color: #52616b;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .details {
+            background: #f7f9fa;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 22px;
+            margin: 28px 0;
+        }
+
+        .links a {
+            display: inline-block;
+            color: #087e8b;
+            margin: 8px 18px 8px 0;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back {
+            color: #087e8b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            border-top: 1px solid #e5e7eb;
+            padding: 24px;
+            text-align: center;
+            color: #718096;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 30px; }
+            main { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="https://github.com/dogra9027-png/junior-cybersecurity-analyst-portfolio" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/dimple-dogra-8771b41a8/" target="_blank">LinkedIn</a>
+    </nav>
+</header>
+
+<main>
+    <a class="back" href="../index.html">← Back to Portfolio</a>
+
+    <p class="eyebrow" style="margin-top: 35px;">Project 01 · Security Operations</p>
+
+    <h1>Security Monitoring and Triage</h1>
+
+    <p>
+        A Python-based security monitoring project focused on analysing
+        simulated security alerts, identifying suspicious activity, and
+        documenting investigation findings.
+    </p>
+
+    <div class="details">
+        <p><strong>Project type:</strong> Hands-on cybersecurity lab</p>
+        <p><strong>Tools:</strong> Python, CSV, MITRE ATT&CK</p>
+        <p><strong>Dataset:</strong> 7 simulated security alerts</p>
+        <p><strong>Focus:</strong> Alert analysis, detection logic, triage and investigation</p>
+    </div>
+
+    <h2>Project Objectives</h2>
+    <ul>
+        <li>Analyse security alerts using Python.</li>
+        <li>Identify suspicious IP addresses and activity patterns.</li>
+        <li>Detect brute-force attempts and port scanning activity.</li>
+        <li>Identify successful logins following suspicious activity.</li>
+        <li>Document findings and map relevant techniques to MITRE ATT&CK.</li>
+    </ul>
+
+    <h2>Detection Scenarios</h2>
+    <ul>
+        <li>Brute-force login attempts.</li>
+        <li>Potential port scanning activity.</li>
+        <li>High-severity security alerts.</li>
+        <li>Successful login following repeated failed attempts.</li>
+    </ul>
+
+    <h2>Key Results</h2>
+    <ul>
+        <li>Analysed 7 unique simulated security alerts.</li>
+        <li>Identified 8 detection rule matches.</li>
+        <li>Flagged 5 alerts for further investigation.</li>
+        <li>Created automated detection reports and unit tests.</li>
+    </ul>
+
+    <h2>Technical Implementation</h2>
+    <p>
+        Python scripts process the alert dataset and apply detection rules
+        to identify suspicious behaviour. Unit tests help verify detection
+        logic, including normal successful logins that should not trigger
+        suspicious-activity alerts.
+    </p>
+
+    <h2>Documentation and Evidence</h2>
+    <p>
+        The project includes investigation reports, detection findings,
+        alert analysis, and MITRE ATT&CK mapping.
+    </p>
+
+    <div class="links">
+        <a href="https://github.com/dogra9027-png/junior-cybersecurity-analyst-portfolio/tree/main/01-security-monitoring-and-triage" target="_blank">View Source Code on GitHub →</a>
+    </div>
+
+    <h2>Project Scope</h2>
+    <p>
+        This is a learning and portfolio project using simulated data.
+        Findings demonstrate detection and investigation techniques;
+        they do not represent monitoring of a live production environment.
+    </p>
+</main>
+
+<footer>
+    © 2026 Dimple Dogra · Cybersecurity Portfolio
+</footer>
+
+</body>
+</html>

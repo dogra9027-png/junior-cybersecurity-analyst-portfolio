@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOC Investigation Lab | Dimple Dogra</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        header {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 8%;
+        }
+
+        nav a {
+            color: #263238;
+            text-decoration: none;
+            margin-right: 24px;
+            font-size: 14px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 24px;
+        }
+
+        .eyebrow {
+            color: #087e8b;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin: 12px 0 20px;
+        }
+
+        h2 {
+            font-size: 23px;
+            margin: 38px 0 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #52616b;
+        }
+
+        ul {
+            padding-left: 22px;
+            color: #52616b;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .details {
+            background: #f7f9fa;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 22px;
+            margin: 28px 0;
+        }
+
+        .links a {
+            display: inline-block;
+            color: #087e8b;
+            margin: 8px 18px 8px 0;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .evidence {
+            margin-top: 18px;
+            padding: 18px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        .evidence img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
+        .note {
+            background: #f7f9fa;
+            border-left: 4px solid #087e8b;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+
+        footer {
+            border-top: 1px solid #e5e7eb;
+            padding: 24px;
+            text-align: center;
+            color: #718096;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 30px; }
+            main { padding: 40px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="https://github.com/dogra9027-png/junior-cybersecurity-analyst-portfolio" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/dimple-dogra-8771b41a8/" target="_blank">LinkedIn</a>
+    </nav>
+</header>
+
+<main>
+
+    <a href="../index.html" style="color:#087e8b;text-decoration:none;font-weight:bold;">
+        ← Back to Portfolio
+    </a>
+
+    <p class="eyebrow" style="margin-top:35px;">Project 02 · Security Operations</p>
+
+    <h1>SOC Investigation Lab</h1>
+
+    <p>
+        A hands-on Security Operations Centre (SOC) investigation project
+        using simulated authentication logs, Python detection scripts,
+        Splunk searches and dashboards, and Sentinel-style KQL queries.
+    </p>
+
+    <div class="details">
+        <p><strong>Project type:</strong> Hands-on SOC investigation lab</p>
+        <p><strong>Dataset:</strong> 15 simulated authentication events</p>
+        <p><strong>Tools:</strong> Python, Splunk, SPL, KQL</p>
+        <p><strong>Framework:</strong> MITRE ATT&CK</p>
+        <p><strong>Focus:</strong> Authentication monitoring, threat detection, investigation and incident response</p>
+    </div>
+
+    <h2>Project Objectives</h2>
+
+    <ul>
+        <li>Analyse authentication logs to identify suspicious login activity.</li>
+        <li>Develop Python-based detection logic for authentication attacks.</li>
+        <li>Write SPL searches and build a Splunk dashboard.</li>
+        <li>Develop Sentinel-style KQL detection queries.</li>
+        <li>Investigate suspicious events and document findings.</li>
+        <li>Create an incident response playbook.</li>
+    </ul>
+
+    <h2>Detection Scenarios</h2>
+
+    <ul>
+        <li>Repeated failed login attempts.</li>
+        <li>Successful login following repeated failures.</li>
+        <li>Failed login attempts against privileged accounts.</li>
+        <li>Successful privileged account login monitoring.</li>
+    </ul>
+
+    <h2>Python Detection Results</h2>
+
+    <p>
+        Python scripts analyse the authentication dataset and identify
+        suspicious patterns for further investigation.
+    </p>
+
+    <ul>
+        <li>15 authentication events analysed.</li>
+        <li>9 failed and 6 successful authentication events.</li>
+        <li>Repeated failed login activity identified for two accounts.</li>
+        <li>A successful login identified after five preceding failed attempts.</li>
+        <li>Three failed privileged-account login attempts identified.</li>
+    </ul>
+
+    <h2>Splunk Investigation and Dashboard</h2>
+
+    <p>
+        Authentication data was uploaded to Splunk Cloud. SPL searches
+        were used to investigate suspicious authentication patterns,
+        and a Dashboard Studio dashboard was created to display
+        authentication activity and detection results.
+    </p>
+
+    <ul>
+        <li>Authentication events by status.</li>
+        <li>Repeated failed login attempts.</li>
+        <li>Successful login after repeated failures.</li>
+        <li>Failed privileged account logins.</li>
+        <li>Successful privileged account logins.</li>
+    </ul>
+
+    <div class="evidence">
+        <strong>Splunk Dashboard Overview</strong>
+        <p>Dashboard displaying authentication monitoring panels.</p>
+        <img src="../02-soc-investigation-lab/07-evidence/screenshots/07-splunk-dashboard-overview.png"
+             alt="Splunk SOC authentication monitoring dashboard overview">
+    </div>
+
+    <div class="evidence">
+        <strong>Splunk Detection Panels</strong>
+        <p>Visual investigation of authentication detection results.</p>
+        <img src="../02-soc-investigation-lab/07-evidence/screenshots/08-splunk-dashboard-detections.png"
+             alt="Splunk dashboard authentication detection panels">
+    </div>
+
+    <h2>Microsoft Sentinel-Style KQL</h2>
+
+    <p>
+        Developed KQL queries covering repeated failed logins,
+        successful logins after repeated failures, and privileged
+        account activity.
+    </p>
+
+    <div class="note">
+        <strong>Validation note:</strong>
+        These are Sentinel-style KQL queries. Their underlying detection
+        logic was validated locally using Python. The queries were not
+        executed in a live Microsoft Sentinel workspace.
+    </div>
+
+    <h2>Investigation and MITRE ATT&CK Mapping</h2>
+
+    <p>
+        Investigation findings were documented and mapped to relevant
+        MITRE ATT&CK techniques, including:
+    </p>
+
+    <ul>
+        <li><strong>T1110 – Brute Force:</strong> Repeated failed authentication attempts.</li>
+        <li><strong>T1078 – Valid Accounts:</strong> Successful authentication following suspicious activity.</li>
+    </ul>
+
+    <h2>Incident Response Playbook</h2>
+
+    <p>
+        Created a structured playbook covering identification, analysis,
+        containment, eradication, recovery and lessons learned.
+        The playbook documents proposed response actions for the
+        simulated investigation scenario.
+    </p>
+
+    <h2>Project Documentation</h2>
+
+    <div class="links">
+        <a href="https://github.com/dogra9027-png/junior-cybersecurity-analyst-portfolio/tree/main/02-soc-investigation-lab" target="_blank">
+            View Project Source and Documentation on GitHub →
+        </a>
+    </div>
+
+    <h2>Project Scope and Limitations</h2>
+
+    <p>
+        This portfolio project uses synthetic authentication data.
+        Splunk Cloud was used for searches and dashboard development.
+        Sentinel-style KQL was developed and locally validated, but
+        was not tested in a live Sentinel workspace. The findings
+        demonstrate practical learning and investigation techniques,
+        not experience monitoring a production SOC environment.
+    </p>
+
+</main>
+
+<footer>
+    © 2026 Dimple Dogra · Cybersecurity Portfolio
+</footer>
+
+</body>
+</html>

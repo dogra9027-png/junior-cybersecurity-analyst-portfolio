@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dimple Dogra's cybersecurity portfolio featuring Python security detection, SOC investigations, Splunk and incident response projects.">
+    <title>Dimple Dogra | Cybersecurity Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #172033;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        header {
+            border-bottom: 1px solid #e8edf4;
+            background: #ffffff;
+        }
+
+        nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            color: #17365d;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            padding: 105px 0 90px;
+            background: #f8fafc;
+        }
+
+        .eyebrow {
+            color: #2563eb;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            max-width: 780px;
+            font-size: clamp(2.3rem, 5vw, 3.8rem);
+            line-height: 1.15;
+            color: #142b4a;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #526174;
+            font-size: 1.12rem;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: #1d4ed8;
+            color: #ffffff;
+        }
+
+        .primary:hover {
+            background: #1e40af;
+        }
+
+        .secondary {
+            border: 1px solid #cbd5e1;
+            color: #17365d;
+            background: #ffffff;
+        }
+
+        .secondary:hover {
+            background: #eff6ff;
+        }
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            color: #142b4a;
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .section-heading p {
+            color: #64748b;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .project-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 28px;
+            background: #ffffff;
+            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+        }
+
+        .project-number {
+            color: #2563eb;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 {
+            color: #17365d;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #58677a;
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .tag {
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .project-link {
+            color: #1d4ed8;
+            font-weight: 700;
+            display: inline-block;
+            margin-right: 16px;
+            margin-top: 5px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .skills-section {
+            background: #f8fafc;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .skill {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 18px;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        .about-text {
+            max-width: 800px;
+            color: #526174;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+        }
+
+        .contact-section {
+            background: #f8fafc;
+            text-align: center;
+        }
+
+        .contact-section p {
+            color: #526174;
+            margin: 10px auto 24px;
+            max-width: 650px;
+        }
+
+        footer {
+            padding: 25px 0;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid #e8edf4;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 18px 0;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .project-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a class="logo" href="#home">Dimple Dogra</a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="eyebrow">Cybersecurity Portfolio</div>
+
+            <h1>Cybersecurity &amp; SOC Analyst Portfolio</h1>
+
+            <p>
+                Hello, I'm Dimple Dogra. I am building practical
+                cybersecurity skills through hands-on projects in
+                security monitoring, Python detection, SIEM investigations,
+                and incident response.
+            </p>
+
+            <div class="buttons">
+                <a class="button primary" href="#projects">Explore Projects</a>
+
+                <a class="button secondary"
+                   href="https://github.com/dogra9027-png/junior-cybersecurity-analyst-portfolio"
+                   target="_blank" rel="noopener noreferrer">
+                    View GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Featured Projects</h2>
+                <p>Practical cybersecurity projects and investigation exercises.</p>
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project-card">
+                    <div class="project-number">PROJECT 01</div>
+
+                    <h3>Security Monitoring and Triage</h3>
+
+                    <p>
+                        A Python-based security monitoring project
+                        focused on analysing simulated security alerts,
+                        identifying suspicious activity, and documenting
+                        detection findings.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Security Detection</span>
+                        <span class="tag">MITRE ATT&amp;CK</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="projects/security-monitoring.html">
+                        View Project Case Study →
+                    </a>
+
+                    <a class="project-link"
+                       href="https://github.com/dogra9027-png/junior-cybersecurity-analyst-portfolio/tree/main/01-security-monitoring-and-triage"
+                       target="_blank" rel="noopener noreferrer">
+                        View Source →
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">PROJECT 02</div>
+
+                    <h3>SOC Investigation Lab</h3>
+
+                    <p>
+                        An authentication investigation lab featuring
+                        Python detection scripts, Splunk dashboards,
+                        Sentinel-style KQL queries, investigation reports,
+                        and an incident response playbook.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Splunk</span>
+                        <span class="tag">SPL</span>
+                        <span class="tag">KQL</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="projects/soc-investigation.html">
+                        View Project Case Study →
+                    </a>
+
+                    <a class="project-link"
+                       href="https://github.com/dogra9027-png/junior-cybersecurity-analyst-portfolio/tree/main/02-soc-investigation-lab"
+                       target="_blank" rel="noopener noreferrer">
+                        View Source →
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Technical Skills</h2>
+                <p>Tools and technologies used in my learning and projects.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill">Python</div>
+                <div class="skill">Splunk Cloud</div>
+                <div class="skill">SPL</div>
+                <div class="skill">Kusto Query Language (KQL)</div>
+                <div class="skill">Security Monitoring</div>
+                <div class="skill">Log Analysis</div>
+                <div class="skill">Incident Investigation</div>
+                <div class="skill">MITRE ATT&amp;CK</div>
+                <div class="skill">Technical Documentation</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-heading">
+                <h2>About Me</h2>
+            </div>
+
+            <div class="about-text">
+                <p>
+                    I have an academic background in computer science
+                    and cybersecurity, along with experience creating
+                    technical documentation, instructional content,
+                    and standard operating procedures.
+                </p>
+
+                <p>
+                    I am developing my cybersecurity portfolio through
+                    practical exercises involving security alert analysis,
+                    authentication monitoring, Python detection logic,
+                    SIEM queries, and incident response documentation.
+                </p>
+
+                <p>
+                    I am currently preparing for the CompTIA Security+
+                    certification and exploring opportunities in
+                    junior cybersecurity and SOC analyst roles.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Let's Connect</h2>
+            </div>
+
+            <p>
+                Interested in my projects or professional background?
+                Connect with me on LinkedIn or explore my work on GitHub.
+            </p>
+
+            <div class="buttons" style="justify-content: center;">
+                <a class="button primary"
+                   href="https://www.linkedin.com/in/dimple-dogra-8771b41a8/"
+                   target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+                <a class="button secondary"
+                   href="https://github.com/dogra9027-png/junior-cybersecurity-analyst-portfolio"
+                   target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 Dimple Dogra | Cybersecurity Portfolio
+    </div>
+</footer>
+
+</body>
+</html>
