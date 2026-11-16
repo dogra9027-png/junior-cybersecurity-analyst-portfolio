@@ -1,0 +1,60 @@
+let FailedLoginThreshold = 3;
+AuthenticationLogs
+| where authentication_status == "FAILED"
+| summarize
+    FailedAttempts = count(),
+    FirstAttempt = min(todatetime(timestamp)),
+LastAttempt = max(todatetime(timestamp)),
+    DestinationHosts = make_set(destination_host)
+    by username, source_ip
+| where FailedAttempts >= FailedLoginThreshold
+| order by FailedAttempts desc
+
+let FailedLoginEvents =
+    AuthenticationLogs
+    | where authentication_status == "FAILED"
+    | project username, source_ip,
+              FailedTimestamp = todatetime(timestamp);
+
+let SuccessfulLoginEvents =
+    AuthenticationLogs
+    | where authentication_status == "SUCCESS"
+    | project event_id, username, source_ip,
+              destination_host,
+              SuccessTimestamp = todatetime(timestamp);
+
+SuccessfulLoginEvents
+| join kind=inner FailedLoginEvents on username, source_ip
+| where FailedTimestamp < SuccessTimestamp
+| summarize
+    FailedAttemptsBeforeSuccess = count(),
+    FirstFailedAttempt = min(FailedTimestamp),
+    LastFailedAttempt = max(FailedTimestamp)
+    by event_id, username, source_ip,
+       destination_host, SuccessTimestamp
+| where FailedAttemptsBeforeSuccess >= 3
+| order by SuccessTimestamp desc
+
+AuthenticationLogs
+| where authentication_status == "FAILED"
+| where username in~ ("admin", "administrator")
+| summarize
+    FailedAttempts = count(),
+    FirstAttempt = min(todatetime(timestamp)),
+    LastAttempt = max(todatetime(timestamp)),
+    DestinationHosts = make_set(destination_host)
+    by username, source_ip
+| extend Severity = "High"
+| order by FailedAttempts desc
+
+AuthenticationLogs
+| where authentication_status == "SUCCESS"
+| where username in~ ("admin", "administrator")
+| project
+    timestamp,
+    event_id,
+    username,
+    source_ip,
+    destination_host,
+    location
+| order by timestamp desc

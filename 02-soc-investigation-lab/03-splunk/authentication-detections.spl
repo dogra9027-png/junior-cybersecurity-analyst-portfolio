@@ -1,0 +1,31 @@
+
+# 1. Authentication event summary
+index=main source="authentication_logs.csv" host="soc-lab"
+| stats count by authentication_status
+
+# 2. Repeated failed login detection
+index=main source="authentication_logs.csv" host="soc-lab"
+authentication_status="FAILED"
+| stats count as failed_attempts
+    min(timestamp) as first_attempt
+    max(timestamp) as last_attempt
+    values(destination_host) as destination_hosts
+    by username source_ip
+| where failed_attempts >= 3
+| sort - failed_attempts
+
+# 3. Successful login after repeated failures
+index=main source="authentication_logs.csv" host="soc-lab"
+| sort 0 username source_ip _time
+| streamstats count(eval(authentication_status="FAILED")) as failed_attempts
+    by username source_ip
+| where authentication_status="SUCCESS" AND failed_attempts >= 3
+| table _time username source_ip destination_host failed_attempts event_id
+
+# 5. Successful privileged account login monitoring
+
+index=main source="authentication_logs.csv" host="soc-lab"
+authentication_status="SUCCESS"
+(username="admin" OR username="administrator")
+| table _time event_id username source_ip destination_host location
+| sort - _time
