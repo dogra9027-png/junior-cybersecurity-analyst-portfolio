@@ -1,38 +1,26 @@
-# Junior Cybersecurity Analyst Portfolio
-
-Welcome to my cybersecurity portfolio. This repository showcases practical projects and hands-on exercises focused on security monitoring, alert detection, investigation, and incident response fundamentals.
-
-My goal is to demonstrate practical cybersecurity skills through documented projects, Python scripting, detection logic, and structured investigation workflows.
-
-## Projects
+## Cybersecurity Projects
 
 ### 1. Security Monitoring and Triage
 
-**Status:** Initial implementation completed
+**Focus:** Security alert analysis and Python-based detection.
 
-A Python-based security alert analysis project that evaluates authentication and network events using detection rules.
+- Analyzed simulated security alerts.
+- Developed Python detection logic for suspicious activity.
+- Identified brute-force attempts, port scanning, and suspicious login patterns.
+- Documented investigation findings and mapped techniques to MITRE ATT&CK.
 
-**Key capabilities:**
-- Detects possible brute-force login activity.
-- Identifies possible port scanning.
-- Flags high-severity security alerts.
-- Correlates failed login attempts with subsequent successful logins.
-- Generates a Markdown security findings report.
-- Includes automated unit tests using Python's `unittest` framework.
+[View Project](01-security-monitoring-and-triage/)
 
-**Technologies:** Python, CSV, PowerShell, Markdown, unittest.
+### 2. SOC Investigation Lab
 
-[View Project: Security Monitoring and Triage](./01-security-monitoring-and-triage/)
+**Focus:** SOC monitoring, authentication analysis, SIEM investigations, and incident response.
 
-## Skills Demonstrated
+- Developed Python scripts to detect suspicious authentication activity.
+- Created SPL queries and a Splunk Dashboard Studio dashboard.
+- Developed Sentinel-style KQL detection queries.
+- Validated detection logic locally using Python.
+- Documented authentication investigations and an incident response playbook.
 
-- Security alert analysis and initial triage
-- Detection logic and event correlation
-- Basic incident investigation
-- Python scripting and automation
-- Security documentation and reporting
-- Testing and validation of detection rules
+[View Project](02-soc-investigation-lab/)
 
-## About This Portfolio
-
-This portfolio is a work in progress. Additional practical projects will be added as I develop my skills in security operations, vulnerability management, and incident response.
+**Tools:** Python, Splunk Cloud, SPL, KQL, MITRE ATT&CK, CSV, VS Code.
