@@ -1,0 +1,11 @@
+user_id,employee_name,job_role,resource,assigned_permission,required_permission,access_scope,review_status,review_reason
+U001,Sarah,HR Specialist,HR System,HR Application,HR Application,Application,MATCH,Assigned permission matches the stated requirement.
+U001,Sarah,HR Specialist,Azure Subscription,Azure Contributor,No Azure Admin Access,Subscription,REVIEW_REQUIRED,Assigned permission does not match the stated business requirement. Validate approval and access need.
+U002,James,SOC Analyst,Security Monitoring,SIEM Read Access,SIEM Read Access,Workspace,MATCH,Assigned permission matches the stated requirement.
+U002,James,SOC Analyst,Security Logs,Security Logs,Security Logs,Workspace,MATCH,Assigned permission matches the stated requirement.
+U003,Maria,Finance Analyst,Finance System,Finance Application,Finance Application,Application,MATCH,Assigned permission matches the stated requirement.
+U003,Maria,Finance Analyst,AWS Account,AWS Administrator,No AWS Admin Access,Account,REVIEW_REQUIRED,Assigned permission does not match the stated business requirement. Validate approval and access need.
+U004,David,IT Support,IT Support System,User Support,User Support,Application,MATCH,Assigned permission matches the stated requirement.
+U004,David,IT Support,Identity Platform,Password Reset,Password Reset,Limited,MATCH,Assigned permission matches the stated requirement.
+U005,Alex,Cloud Administrator,AWS Account,AWS Administrator,AWS Administrator,Account,PRIVILEGED_ACCESS_REVIEW,"Permission matches the stated requirement but is privileged. Validate business justification, approval, and scope."
+U005,Alex,Cloud Administrator,Azure Subscription,Azure Contributor,Azure Contributor,Subscription,PRIVILEGED_ACCESS_REVIEW,"Permission matches the stated requirement but is privileged. Validate business justification, approval, and scope."
