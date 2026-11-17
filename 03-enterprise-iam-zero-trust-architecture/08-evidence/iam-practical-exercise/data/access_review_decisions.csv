@@ -1,5 +1,0 @@
-user_id,employee_name,resource,assigned_permission,review_status,analyst_decision,justification,next_action
-U001,Sarah,Azure Subscription,Azure Contributor,REVIEW_REQUIRED,REVOKE_PENDING_APPROVAL,Permission does not align with stated HR role requirements,Confirm with manager and resource owner before revocation
-U003,Maria,AWS Account,AWS Administrator,REVIEW_REQUIRED,REVOKE_PENDING_APPROVAL,Administrative access is not required by stated Finance role requirements,Confirm with manager and AWS account owner before revocation
-U005,Alex,AWS Account,AWS Administrator,PRIVILEGED_ACCESS_REVIEW,RETAIN_PENDING_VALIDATION,Permission matches stated Cloud Administrator requirement,Validate business justification approval and least-privilege scope
-U005,Alex,Azure Subscription,Azure Contributor,PRIVILEGED_ACCESS_REVIEW,RETAIN_PENDING_VALIDATION,Permission matches stated Cloud Administrator requirement,Validate business justification approval and least-privilege scope
