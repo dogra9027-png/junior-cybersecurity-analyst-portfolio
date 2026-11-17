@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dimple Dogra's cybersecurity portfolio featuring Python security detection, SOC investigations, Splunk and incident response projects.">
+    <meta name="description" content="Dimple Dogra's cybersecurity portfolio featuring Python security detection, SOC investigations, Splunk, IAM, Zero Trust architecture and incident response projects.">
     <title>Dimple Dogra | Cybersecurity Portfolio</title>
 
     <style>
@@ -160,6 +160,8 @@
             padding: 28px;
             background: #ffffff;
             box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+            display: flex;
+            flex-direction: column;
         }
 
         .project-number {
@@ -301,6 +303,8 @@
 
 <main>
 
+    <!-- HERO SECTION -->
+
     <section class="hero" id="home">
         <div class="container">
             <div class="eyebrow">Cybersecurity Portfolio</div>
@@ -308,14 +312,17 @@
             <h1>Cybersecurity &amp; SOC Analyst Portfolio</h1>
 
             <p>
-                Hello, I'm Dimple Dogra. I am building practical
-                cybersecurity skills through hands-on projects in
-                security monitoring, Python detection, SIEM investigations,
+                Hello, I'm Dimple Dogra. I am developing practical
+                cybersecurity skills through projects involving security
+                monitoring, Python-based detection, SIEM investigations,
+                identity and access management, Zero Trust security,
                 and incident response.
             </p>
 
             <div class="buttons">
-                <a class="button primary" href="#projects">Explore Projects</a>
+                <a class="button primary" href="#projects">
+                    Explore Projects
+                </a>
 
                 <a class="button secondary"
                    href="https://github.com/dogra9027-png/junior-cybersecurity-analyst-portfolio"
@@ -326,14 +333,21 @@
         </div>
     </section>
 
+    <!-- PROJECTS SECTION -->
+
     <section id="projects">
         <div class="container">
             <div class="section-heading">
                 <h2>Featured Projects</h2>
-                <p>Practical cybersecurity projects and investigation exercises.</p>
+                <p>
+                    Practical cybersecurity projects, investigation exercises,
+                    and security architecture case studies.
+                </p>
             </div>
 
             <div class="project-grid">
+
+                <!-- PROJECT 01 -->
 
                 <article class="project-card">
                     <div class="project-number">PROJECT 01</div>
@@ -341,16 +355,17 @@
                     <h3>Security Monitoring and Triage</h3>
 
                     <p>
-                        A Python-based security monitoring project
-                        focused on analysing simulated security alerts,
-                        identifying suspicious activity, and documenting
-                        detection findings.
+                        A Python-based security monitoring project focused
+                        on analysing simulated security alerts, identifying
+                        suspicious activity, applying detection rules,
+                        and documenting investigation findings.
                     </p>
 
                     <div class="tags">
                         <span class="tag">Python</span>
                         <span class="tag">Security Detection</span>
                         <span class="tag">MITRE ATT&amp;CK</span>
+                        <span class="tag">Incident Triage</span>
                     </div>
 
                     <a class="project-link"
@@ -365,16 +380,19 @@
                     </a>
                 </article>
 
+                <!-- PROJECT 02 -->
+
                 <article class="project-card">
                     <div class="project-number">PROJECT 02</div>
 
                     <h3>SOC Investigation Lab</h3>
 
                     <p>
-                        An authentication investigation lab featuring
-                        Python detection scripts, Splunk dashboards,
-                        Sentinel-style KQL queries, investigation reports,
-                        and an incident response playbook.
+                        A simulated SOC investigation lab featuring Python
+                        detection scripts, Splunk dashboards, authentication
+                        log analysis, Sentinel-style KQL queries,
+                        investigation reports, and incident response
+                        documentation.
                     </p>
 
                     <div class="tags">
@@ -382,6 +400,7 @@
                         <span class="tag">Splunk</span>
                         <span class="tag">SPL</span>
                         <span class="tag">KQL</span>
+                        <span class="tag">SIEM</span>
                     </div>
 
                     <a class="project-link"
@@ -396,30 +415,87 @@
                     </a>
                 </article>
 
+                <!-- PROJECT 03 -->
+
+                <article class="project-card">
+                    <div class="project-number">PROJECT 03</div>
+
+                    <h3>Enterprise IAM and Zero Trust Architecture</h3>
+
+                    <p>
+                        An enterprise security architecture case study
+                        for a fictional 200-employee organization.
+                        Covers identity and access management, role-based
+                        access controls, least privilege, Zero Trust,
+                        cloud security, threat modelling, and a Python-based
+                        simulated IAM access review.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">IAM</span>
+                        <span class="tag">Zero Trust</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Azure</span>
+                        <span class="tag">Access Review</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="projects/enterprise-iam-zero-trust.html">
+                        View Project Case Study →
+                    </a>
+
+                    <a class="project-link"
+                       href="https://github.com/dogra9027-png/junior-cybersecurity-analyst-portfolio/tree/main/03-enterprise-iam-zero-trust-architecture"
+                       target="_blank" rel="noopener noreferrer">
+                        View Source →
+                    </a>
+                </article>
+
             </div>
         </div>
     </section>
+
+    <!-- SKILLS SECTION -->
 
     <section class="skills-section" id="skills">
         <div class="container">
             <div class="section-heading">
                 <h2>Technical Skills</h2>
-                <p>Tools and technologies used in my learning and projects.</p>
+                <p>
+                    Tools, technologies, and security concepts explored
+                    through my projects and professional development.
+                </p>
             </div>
 
             <div class="skills-grid">
                 <div class="skill">Python</div>
                 <div class="skill">Splunk Cloud</div>
-                <div class="skill">SPL</div>
+                <div class="skill">Search Processing Language (SPL)</div>
                 <div class="skill">Kusto Query Language (KQL)</div>
                 <div class="skill">Security Monitoring</div>
+                <div class="skill">Security Alert Analysis</div>
                 <div class="skill">Log Analysis</div>
+                <div class="skill">Threat Detection</div>
                 <div class="skill">Incident Investigation</div>
                 <div class="skill">MITRE ATT&amp;CK</div>
-                <div class="skill">Technical Documentation</div>
+                <div class="skill">Identity and Access Management</div>
+                <div class="skill">Role-Based Access Control</div>
+                <div class="skill">Least Privilege</div>
+                <div class="skill">Privileged Access Review</div>
+                <div class="skill">Zero Trust Security</div>
+                <div class="skill">AWS IAM Concepts</div>
+                <div class="skill">Microsoft Azure Security Concepts</div>
+                <div class="skill">Threat Modelling</div>
+                <div class="skill">Risk Assessment</div>
+                <div class="skill">Python Automation</div>
+                <div class="skill">Security Documentation</div>
+                <div class="skill">Technical Reporting</div>
             </div>
         </div>
     </section>
+
+    <!-- ABOUT SECTION -->
 
     <section id="about">
         <div class="container">
@@ -430,26 +506,37 @@
             <div class="about-text">
                 <p>
                     I have an academic background in computer science
-                    and cybersecurity, along with experience creating
-                    technical documentation, instructional content,
-                    and standard operating procedures.
+                    and cybersecurity, along with professional experience
+                    in technical documentation, instructional content
+                    development, and standard operating procedures.
+                </p>
+
+                <p>
+                    My experience includes developing technical learning
+                    resources and documenting practical exercises involving
+                    cybersecurity and cloud technologies. I bring a strong
+                    foundation in structured documentation, analytical
+                    thinking, and communicating technical concepts clearly.
                 </p>
 
                 <p>
                     I am developing my cybersecurity portfolio through
                     practical exercises involving security alert analysis,
                     authentication monitoring, Python detection logic,
-                    SIEM queries, and incident response documentation.
+                    SIEM investigations, IAM access reviews, and
+                    security architecture design.
                 </p>
 
                 <p>
                     I am currently preparing for the CompTIA Security+
                     certification and exploring opportunities in
-                    junior cybersecurity and SOC analyst roles.
+                    junior cybersecurity analyst and SOC analyst roles.
                 </p>
             </div>
         </div>
     </section>
+
+    <!-- CONTACT SECTION -->
 
     <section class="contact-section" id="contact">
         <div class="container">
